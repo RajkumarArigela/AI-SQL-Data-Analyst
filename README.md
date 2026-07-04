@@ -1,83 +1,76 @@
-# 🤖 AI SQL Data Analyst 2.0
+# AI SQL Data Analyst 2.0
 
-An AI-powered SQL Data Analyst that allows users to upload any CSV dataset, ask questions in natural language, automatically generates SQL queries, executes them on a SQLite database, visualizes results, and provides AI-generated business insights.
+AI SQL Data Analyst 2.0 is an AI-powered data analytics application that enables users to analyze structured datasets using natural language. Users can upload any CSV file, ask analytical questions in plain English, and receive automatically generated SQL queries, query results, visualizations, KPI summaries, and AI-generated business insights.
 
-**🚀 Live Demo:** https://ai-sql-data-analyst-2pz9k4b6xdg6vfmi4qyx3i.streamlit.app/
+**Live Demo**  
+https://ai-sql-data-analyst-2pz9k4b6xdg6vfmi4qyx3i.streamlit.app/
 
-**💻 GitHub Repository:** https://github.com/RajkumarArigela/AI-SQL-Data-Analyst
-
----
-
-# 📌 Features
-
-✅ Upload any CSV dataset
-
-✅ Automatically convert CSV into SQLite database
-
-✅ Ask questions in plain English
-
-✅ AI converts natural language into SQL
-
-✅ SQL validation for safer execution
-
-✅ Execute SQL automatically
-
-✅ Display query results
-
-✅ Interactive visualizations
-
-✅ KPI Dashboard
-
-✅ AI-generated SQL explanation
-
-✅ AI-generated business insights
-
-✅ Smart follow-up analytical questions
-
-✅ Robust error handling
-
-✅ Streamlit web application
+**GitHub Repository**  
+https://github.com/RajkumarArigela/AI-SQL-Data-Analyst
 
 ---
 
-# 🏗️ System Architecture
+# Overview
+
+The application simplifies SQL-based data analysis by allowing users to interact with their datasets conversationally. It combines Large Language Models (Google Gemini), SQLite, and Streamlit to automatically generate SQL queries, execute them safely, visualize the results, and provide meaningful business insights.
+
+---
+
+# Key Features
+
+- Upload any CSV dataset
+- Automatic CSV to SQLite conversion
+- Natural language to SQL generation using Google Gemini
+- SQL query validation before execution
+- Automatic SQL execution
+- Interactive result visualization
+- KPI dashboard
+- AI-generated SQL explanation
+- AI-generated business insights
+- Suggested follow-up analytical questions
+- Error handling and validation
+- Web-based interface built with Streamlit
+
+---
+
+# System Architecture
 
 ```
-                User Uploads CSV
-                        │
-                        ▼
-                Pandas DataFrame
-                        │
-                        ▼
-              SQLite Database Creation
-                        │
-                        ▼
-            User Asks Question (English)
-                        │
-                        ▼
-         Gemini AI → SQL Query Generation
-                        │
-                        ▼
-                SQL Validation Layer
-                        │
-                        ▼
-             Execute Query on SQLite
-                        │
-                        ▼
-                  Query Results
-                        │
-         ┌──────────────┼──────────────┐
-         ▼              ▼              ▼
-     KPI Cards      Charts       AI Analysis
-                                      │
-             ┌────────────────────────┼────────────────────┐
-             ▼                        ▼                    ▼
-      SQL Explanation        Business Insights     Follow-up Questions
+                 CSV Dataset
+                      │
+                      ▼
+              Pandas DataFrame
+                      │
+                      ▼
+             SQLite Database
+                      │
+                      ▼
+        Natural Language Question
+                      │
+                      ▼
+         Gemini AI SQL Generation
+                      │
+                      ▼
+             SQL Validation Layer
+                      │
+                      ▼
+              SQLite Execution
+                      │
+                      ▼
+               Query Results
+                      │
+      ┌───────────────┼───────────────┐
+      ▼               ▼               ▼
+ KPI Dashboard   Visualization   AI Analysis
+                                       │
+          ┌────────────────────────────┼───────────────────────────┐
+          ▼                            ▼                           ▼
+ SQL Explanation             Business Insights         Follow-up Questions
 ```
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 AI-SQL-Data-Analyst/
@@ -89,28 +82,30 @@ AI-SQL-Data-Analyst/
 ├── analyst_ai.py
 ├── charts.py
 ├── requirements.txt
-├── .gitignore
 ├── README.md
-├── .env
+├── .gitignore
 ├── data/
-└── venv/
+└── screenshots/
 ```
 
 ---
 
-# ⚙️ Tech Stack
+# Technology Stack
 
-- Python
-- Streamlit
-- SQLite
-- Pandas
-- LangChain
-- Google Gemini API
-- Matplotlib
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Web Framework | Streamlit |
+| Database | SQLite |
+| Data Processing | Pandas |
+| Large Language Model | Google Gemini |
+| AI Framework | LangChain |
+| Visualization | Matplotlib |
+| Version Control | Git, GitHub |
 
 ---
 
-# 🚀 Installation
+# Installation
 
 Clone the repository
 
@@ -118,27 +113,27 @@ Clone the repository
 git clone https://github.com/RajkumarArigela/AI-SQL-Data-Analyst.git
 ```
 
-Go to the project folder
+Navigate to the project directory
 
 ```bash
 cd AI-SQL-Data-Analyst
 ```
 
-Create virtual environment
+Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate virtual environment
+Activate the virtual environment
 
-### Windows
+**Windows**
 
 ```bash
 venv\Scripts\activate
 ```
 
-### Linux / macOS
+**Linux / macOS**
 
 ```bash
 source venv/bin/activate
@@ -152,15 +147,9 @@ pip install -r requirements.txt
 
 ---
 
-# 🔑 Configure API Key
+# Configuration
 
-Create a file named
-
-```
-.env
-```
-
-Add
+Create a `.env` file in the project root and add your Google Gemini API key.
 
 ```env
 GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
@@ -168,7 +157,7 @@ GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
 
 ---
 
-# ▶️ Run Application
+# Running the Application
 
 ```bash
 streamlit run app.py
@@ -176,9 +165,39 @@ streamlit run app.py
 
 ---
 
-# 📊 Example Questions
+# Application Screenshots
 
-Try asking:
+## Home Page
+
+![Home Page](screenshots/AI-sql%20Data%20analysis%202.0.png)
+
+---
+
+## SQL Generation and Query Results
+
+![SQL Generation](screenshots/AskQ%26Generated%20SQL%26results.png)
+
+---
+
+## Data Visualization
+
+![Visualization](screenshots/Visualization.png)
+
+---
+
+## AI Business Analysis
+
+![AI Analysis](screenshots/Ai%20analysis.png)
+
+---
+
+## Suggested Follow-up Questions
+
+![Follow-up Questions](screenshots/FollowupQ%26Ai%20analysis.png)
+
+---
+
+# Example Questions
 
 - Which state has the highest total investment?
 - Show total investment by city.
@@ -186,124 +205,102 @@ Try asking:
 - Which payment mode is used the most?
 - Which age group invests the most?
 - Show KYC completed investors by state.
-- Which city tier contributes the highest revenue?
+- Which city tier contributes the highest investment?
 - What is the average annual income by state?
-- Which transaction type is most common?
-- Show top 10 investors based on investment amount.
+- Which transaction type is the most common?
+- Show the top 10 investors by investment amount.
 
 ---
 
-# 📈 Workflow
+# Application Workflow
 
 ```
-Upload CSV
-
-↓
-
+Upload CSV Dataset
+        │
+        ▼
 Create SQLite Database
-
-↓
-
-Ask Question
-
-↓
-
-Generate SQL
-
-↓
-
+        │
+        ▼
+Ask Analytical Question
+        │
+        ▼
+Generate SQL Query
+        │
+        ▼
 Validate SQL
-
-↓
-
+        │
+        ▼
 Execute SQL
-
-↓
-
-Display Results
-
-↓
-
-Generate Charts
-
-↓
-
-Show KPI Dashboard
-
-↓
-
-AI Analysis
-
-↓
-
-Business Insights
-
-↓
-
-Follow-up Questions
+        │
+        ▼
+Display Query Results
+        │
+        ▼
+Generate Visualizations
+        │
+        ▼
+Display KPI Dashboard
+        │
+        ▼
+Generate AI Insights
+        │
+        ▼
+Suggest Follow-up Questions
 ```
----
-# 🎯 Skills Demonstrated
 
-- Python Programming
-- SQL
-- SQLite
+---
+
+# Skills Demonstrated
+
+- Python Development
+- SQL and SQLite
 - Data Analysis
-- Streamlit
 - Prompt Engineering
-- Google Gemini API
-- LangChain
+- Streamlit Application Development
+- LangChain Integration
+- Google Gemini API Integration
+- Large Language Model Applications
 - Data Visualization
-- AI Application Development
-- LLM Integration
 - Error Handling
-- Git & GitHub
+- Git and GitHub
 
 ---
 
-# 🔮 Future Improvements
+# Future Enhancements
 
-- Multiple CSV uploads
-- Automatic table relationship detection
-- SQL query history
-- Download query results as Excel/PDF
-- Authentication and user accounts
-- Dark mode
-- Advanced interactive charts
+- Support for multiple datasets
+- Automatic relationship detection between tables
+- Query history
+- Export reports to PDF and Excel
+- User authentication
+- Interactive dashboards
 - Conversation memory
 - Database schema visualization
-- Support for PostgreSQL and MySQL
+- PostgreSQL support
+- MySQL support
+- SQL Server support
 - Voice-based analytical queries
-- Agentic AI workflow with LangGraph
-- Automatic report generation
-- Predictive analytics and forecasting
+- Agentic AI workflow
+- Automated report generation
+- Predictive analytics
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 **Rajkumar Arigela**
 
-📧 Email: therajkumararigela@gmail.com
+Email  
+therajkumararigela@gmail.com
 
-💼 LinkedIn: https://www.linkedin.com/in/rajkumar-arigela
+LinkedIn  
+https://www.linkedin.com/in/rajkumar-arigela
 
-🐙 GitHub: https://github.com/RajkumarArigela
-
----
-
-# ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
-
-It helps others discover the project and motivates future improvements.
+GitHub  
+https://github.com/RajkumarArigela
 
 ---
 
-# 📜 License
+# License
 
 This project is licensed under the MIT License.
-
----
-
-## 🚀 Built with ❤️ by Rajkumar Arigela

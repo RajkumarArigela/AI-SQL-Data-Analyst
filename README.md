@@ -242,41 +242,7 @@ Business Insights
 
 Follow-up Questions
 ```
-
 ---
-
-# 📸 Application Screenshots
-
-## Upload Dataset
-
-(Add Screenshot Here)
-
----
-
-## SQL Generation
-
-(Add Screenshot Here)
-
----
-
-## Query Results
-
-(Add Screenshot Here)
-
----
-
-## Dashboard
-
-(Add Screenshot Here)
-
----
-
-## AI Analysis
-
-(Add Screenshot Here)
-
----
-
 # 🎯 Skills Demonstrated
 
 - Python Programming
